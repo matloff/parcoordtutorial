@@ -1,11 +1,21 @@
 # parcoordtutorial
 ##Tutorial on the parallel coordinates visualization method.
 
-###What is parallel coordinate?
+Table of Contents
+=================
+
+  * [Introduction to parallel coordinates.](#introduction)
+        * [What is parallel coordinate?](#what)
+        * [How can parallel coordinate be helpful?](#what)
+  
+##Introduction
+###What is parallel coordinate? 
 Parallel coordinates was invented by Alfred Inselberg in the 1970s as a way to visualize high-dimensional data. A parallel coordinate plot maps each row in the data table as a line, or profile. Each attribute of a row is represented by a point on the line. 
 
 The values in a parallel coordinate plot are always normalized into percentages. This means that for each point along the X-axis (attributes), the minimum value in the corresponding column is set to 0% and the maximum value in that column is set to 100% along the Y-axis. 
 
+If you would like more info, here is link that explains in greater detail.
+[What is a Parallel Coordinate Plot?](https://docs.tibco.com/pub/sfire-analyst/7.5.0/doc/html/WebHelp/para/para_what_is_a_parallel_coordinate_plot.htm)
 ###How can parallel coordinate helpful?
 Parallel coordinates can help define patterns and coorlilation that can explained by different variables. 
 
