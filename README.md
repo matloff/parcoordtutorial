@@ -8,6 +8,7 @@ Table of Contents
 
     * [What is parallel coordinate?](#what)
     * [How can parallel coordinate be helpful?](#what)
+    * [How to identify outliers?](#what)
   
 ##Introduction
 ###What is parallel coordinate? 
@@ -72,3 +73,23 @@ library(freqparcoord)
 freqparcoord(Pitching[,13:18],m=10,k=posjitter(70)) 
 ```
 <img src="plots/freq_pitching.png">
+
+Here you can see that there is clear coorelation between the number of hits allowed and the earned run allowed by a pitcher. The downward sloping line from H to ER indicates that the lower the number of hits allowed by a pitcher, the lower his ER number will be. Likewise, BB and SO also have a similar relation, the lower the BB the higher the strikeouts. 
+
+###How to identify outliers?
+With such large data set, outliers are likely normalized and insignficant. But lets take a look at how we can identify them, and see the what kind of characteristic these outliers shared. 
+
+Lets take another look at our mtcars data.
+###Example:
+```R
+library(freqparcoord)
+p <- freqparcoord(mtcars[,1:4],-1,k=7,keepidxs=4)
+> p$idxs
+[1] 31
+> mtcars[31,]
+              mpg cyl disp  hp drat   wt qsec vs am gear carb
+Maserati Bora  15   8  301 335 3.54 3.57 14.6  0  1    5    8
+```
+
+We found our outlier, a Maserati Bora with 335 horsepower! Try to apply the same code to the pitching data. The result should be interesting. 
+
