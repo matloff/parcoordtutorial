@@ -54,12 +54,12 @@ library(MASS)
 read.csv('~/parcoordtutorial/data/Pitching.csv') # path to the repo
 parcoord( Pitching[,13:18], col=rainbow(length(Pitching[,1])), var.label=TRUE)
 ```
-To explore other dataset simply download the csv file and use the <b>read.csv() </b> function with the path to the downloaded data as the parameter. Here is a massive list of public dataset. 
+To explore other dataset simply download the csv file and use the <b>read.csv() </b> function with the path to the downloaded data as the parameter. Here is a massive list of public datasets. 
 
 [Awesome Public Datasets](https://github.com/caesar0301/awesome-public-datasets)
 
 <img src="vignettes/pitching.png">
-As you can see the trend in this plot is very much indistinguishible. One common techinque to make the plot clearer called <b>brushing<b>, which essentially highlights the part of the data we would like to look bringing it to the foreground while the other lines remained in the background. The result is a brushed part of the lines in heavy black, with the rest still in the background in gray for context. 
+As you can see the trend in this plot is very much indistinguishible. One common techinque to make the plot clearer called <b>brushing</b>, which essentially highlights the part of the data we would like to look bringing it to the foreground while the other lines remained in the background. The result is a brushed part of the lines in heavy black, with the rest still in the background in gray for context. 
 
 <h3>How to make this plot clearer?</h3>
 The problem with the parallel coordinates above is that the screen is too cluttered with many lines, making hard to identify the trend. In order to avoid this problem, we can use the freqparcoord package which plots only the lines having the highest estimated multivariate density.
@@ -118,8 +118,8 @@ mtcars
 A data frame with 32 observations on 11 variables.
 Brief explanation of the variable names are provided below:
 
-*   <b>mpg<b>: Miles/(US) gallon
-*   <b>cyl<b>: Number of cylinders
+*   <b>mpg</b>: Miles/(US) gallon
+*   <b>cyl</b>: Number of cylinders
 *   <b>disp</b>: Displacement (cu.in.)
 *   <b>hp</b>: Gross horsepower
 *   <b>drat</b>: Rear axle ratio
