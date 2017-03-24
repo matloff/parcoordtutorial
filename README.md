@@ -18,16 +18,34 @@ Table of Contents
   * [Papers](#papers)
 * [Packages for Parallel Coordinates](#software)
   
-  <h2>Introduction</h2>
+<h2>Introduction</h2>
 <h3>What is parallel coordinate? </h3>
-Parallel coordinates was invented by Alfred Inselberg in the 1970s as a way to visualize high-dimensional data. A parallel coordinate plot maps each row in the data table as a line, or profile. Each attribute of a row is represented by a point on the line. 
-
+Parallel coordinates method was invented by Alfred Inselberg in the 1970s as a way to visualize high-dimensional data. A parallel coordinate plot maps each row in the data table as a line or profile. Each attribute of a row is represented by a point on the line. As opposed to a normal line graph, a single line in a parallel coordinates graph connects a series of values, each associated with a variable. Note that each variable may have different units hence the need for these values to be normalized. 
 The values in a parallel coordinate plot are always normalized into percentages. This means that for each point along the X-axis (attributes), the minimum value in the corresponding column is set to 0% and the maximum value in that column is set to 100% along the Y-axis. 
 
 If you would like more info, here is link that explains in greater detail.
 [What is a Parallel Coordinate Plot?](https://docs.tibco.com/pub/sfire-analyst/7.5.0/doc/html/WebHelp/para/para_what_is_a_parallel_coordinate_plot.htm)
+
 <h3>How can parallel coordinate helpful?</h3>
-Parallel coordinates can help define patterns and coorlilation that can explained by different variables. 
+The strength of parallel coordinates is their ability to bring meaningful multivariate patterns and comparisons to light when used interactively for analysis.
+Parallel coordinates can reveal correlations between multiple variables. This is particularly useful when you want to identify which conditions correlate highly with a particular outcome. For instance, which what is the demographic of those who voted for a Donald Trump.
+
+<h3>Example:</h3>
+<h4> Parcoord Package <h4>
+<img src=vignettes/trump.png>
+<h4> Freqparcoord Package </h4>
+<img src=vignettes/trump_freq.png>
+The 494 counties where Donald Trump won the primaries have high percentages of white voters and low percentages of minority voters.
+
+<b>Demographic profile in percentages</b>
+
+|  White | African American  |American Indian    |     Asian | Pacific Islander  | Mixed Race |   Hispanic |
+|---|---|:-:|---|---|---|---|
+| 85.16 |   9.54 |   1.75  |   1.41 | 0.12   |2.02   | 7.83 |
+
+
+[Code to generate the above plots](inst/trump.R) <br>
+[Data courtesy of Kaggle](https://www.kaggle.com/benhamner/2016-us-election)
 
 <h3>Example:</h3>
 
@@ -161,9 +179,9 @@ Parallel coordinates can give us a rough overview of which variable we should or
 data("mtcars") 
 freqparcoord(mtcars ,m=10,k=5)
 ```
-<b>Try changing m and k<br>
+<h5>Try changing m and k<br>
 How does a higher k value impact our plot?<br>
-What about the case for m?</b>
+What about the case for m?</h5>
 <img src="vignettes/inde_var.png" style="width: 100%;">
 
 *By looking at this parallel coordinates plot, which variable we should include in our linear model?*
@@ -220,7 +238,7 @@ With the following parameters: <br>
 ```R
 freqparcoord( mtcars[,1:3],m=8,k=4)
 ```
-<img src="vignettes/freq_cluster.png" style="height: 100% width:100%;" >
+<img src="vignettes/cluster_freq.png" style="height: 100% width:100%;" >
 
 For more on cluster analysis, you would find the following links helpful. 
 
@@ -229,7 +247,7 @@ For more on cluster analysis, you would find the following links helpful.
 [Introduction to Cluster Analysis](https://www.stat.berkeley.edu/~s133/Cluster1.html)
 
 
-<h3>Resources</h3>
+<h2>Resources</h2>
 <h4>Websites</h4>
 
 *   [Graph theory applied to data visualization](https://www.youtube.com/playlist?list=PL35C0D424A858AE69)
@@ -244,7 +262,7 @@ For more on cluster analysis, you would find the following links helpful.
 *   [Enhancing Parallel Coordinates: Statistical Visualizations for Analyzing Soccer Data](https://bib.dbvis.de/uploadedFiles/parallelCoordinatesSoccer.pdf)
 *   [The Parallel Coordinates Matrix](http://www.cc.gatech.edu/~stasko/papers/eurovis12-pcm.pdf)
 
-<h3>Packages for Parallel Coordinates</h3>
+<h2>Packages for Parallel Coordinates</h2>
 
 * [parcoord](https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/parcoord.html)
 * [freqparcoord](https://cran.r-project.org/web/packages/freqparcoord/freqparcoord.pdf)
