@@ -13,3 +13,6 @@ mtcars$carb <- factor(mtcars$carb)
 lmodel <- lm(mtcars$mpg ~ ., data=mtcars)
 rlmodel<- stepAIC(lmodel)
 summary(rlmodel)
+
+parcoord( mtcars[,1:3], col=rainbow(length(mtcars[,1])), var.label=TRUE)
+freqparcoord( mtcars[,1:3],m=8,k=4)
