@@ -32,10 +32,9 @@ Parallel coordinates can reveal correlations between multiple variables. This is
 
 <h3>Example:</h3>
 <h4> Parcoord Package <h4>
-<img src=vignettes/trump.png>
+<img src=vignettes/trump.png >
 <h4> Freqparcoord Package </h4>
 <img src=vignettes/trump_freq.png>
-The 494 counties where Donald Trump won the primaries have high percentages of white voters and low percentages of minority voters.
 
 <b>Demographic profile in percentages</b>
 
@@ -43,6 +42,12 @@ The 494 counties where Donald Trump won the primaries have high percentages of w
 |---|---|:-:|---|---|---|---|
 | 85.16 |   9.54 |   1.75  |   1.41 | 0.12   |2.02   | 7.83 |
 
+<b>National Demographic profile in percentages</b>
+
+|  White | African American  |American Indian    |     Asian | Pacific Islander  | Mixed Race |   Hispanic |
+|---|---|:-:|---|---|---|---|
+| 77.1 |   13.3 |   1.2  |   5.6 | 0.2   | 2.6   | 17.6 |
+*source [US Census Bureau](https://www.census.gov/quickfacts/)*
 
 [Code to generate the above plots](inst/trump.R) <br>
 [Data courtesy of Kaggle](https://www.kaggle.com/benhamner/2016-us-election)
@@ -267,4 +272,5 @@ For more on cluster analysis, you would find the following links helpful.
 * [parcoord](https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/parcoord.html)
 * [freqparcoord](https://cran.r-project.org/web/packages/freqparcoord/freqparcoord.pdf)
 * [parallel-coordinates](https://github.com/syntagmatic/parallel-coordinates)
+
 
