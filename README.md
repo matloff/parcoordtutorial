@@ -28,7 +28,7 @@ If you would like more info, here is link that explains in greater detail.
 
 <h3>How can parallel coordinate helpful?</h3>
 The strength of parallel coordinates is their ability to bring meaningful multivariate patterns and comparisons to light when used interactively for analysis.
-Parallel coordinates can reveal correlations between multiple variables. This is particularly useful when you want to identify which conditions correlate highly with a particular outcome. For instance, which what is the demographic of those who voted for a Donald Trump.
+Parallel coordinates can reveal correlations between multiple variables. This is particularly useful when you want to identify which conditions correlate highly with a particular outcome. For instance, what is the demographic of those who voted for a Donald Trump.
 
 <h3>Example:</h3>
 <h4> Parcoord Package <h4>
@@ -243,8 +243,11 @@ With the following parameters: <br>
 <b> k (Number of nearest neighbors to use for density estimation) = 4 </b>
 
 ```R
-freqparcoord( mtcars[,1:3],m=8,k=4)
+freqparcoord( mtcars[,1:3],m=1,k=4, method = "locmax")
 ```
+</br>
+We employed the <b> locmax </b> method here is to define the clusters. The method uses the local maxima to define the clusters. The rows having the property that their density value is highest in their klm-neighborhood will be plotted.
+
 <img src="vignettes/cluster_freq.png" style="height: 100% width:100%;" >
 
 For more on cluster analysis, you would find the following links helpful. 
